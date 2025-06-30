@@ -15,10 +15,72 @@
 
 <body>
 
+  <main class="container my-4">
+    <section class="bg-white p-4 rounded-2">
+      <h1 class="text-center fw-bold pb-3 mb-4 border-bottom">Create a product</h1>
+
+      <div class="pb-2">
+        <label for="productName" class="form-label">Product Name</label>
+        <input type="text" id="productName" name="productName" class="form-control">
+      </div>
+
+      <div class="pb-2">
+        <label for="productPrice" class="form-label">Product Price</label>
+        <input type="text" id="productPrice" name="productPrice" class="form-control">
+      </div>
+
+      <div class="pb-2">
+        <label for="productCategory" class="form-label">Product Category</label>
+        <input list="categories" type="text" id="productCategory" name="productCategory" class="form-control">
+
+        <datalist id="categories">
+          <option value="Fashion & Apparel"></option>
+          <option value="Food & Beverage"></option>
+          <option value="Home Goods"></option>
+          <option value="Toys & Games"></option>
+          <option value="Books, Movies"></option>
+        </datalist>
+      </div>
+
+      <div class="pb-2">
+        <label for="productDescription" class="form-label">Product Description</label>
+        <textarea type="text" id="productDescription" name="productDescription" class="form-control"
+          rows="3"></textarea>
+      </div>
+
+      <div class="pb-2">
+        <label for="productImage" class="form-label">Product Image</label>
+        <input type="file" id="productImage" name="productImage" class="form-control" rows="3" />
+      </div>
+
+      <div class="py-2">
+        <button type="button" id="addProduct" class="btn btn-primary me-2">
+          Add Product
+        </button>
+        <button type="button" id="updateProduct" class="btn btn-success d-none">
+          Update Product
+        </button>
+      </div>
+
+    </section>
+    <section class="my-4 bg-white p-4 rounded-2">
+
+      <div class="position-relative text-md-center pb-3 mb-4 border-bottom">
+        <h2 class="fw-bold">Products</h2>
+        <input type="text" class="form-control search position-absolute end-0 top-0" placeholder="search for product">
+      </div>
+      <div class="container-fluid">
+        <div class="row products-box g-4">
+
+        </div>
+      </div>
+    </section>
+  </main>
+
 
   <!-- js files -->
-  <script src="./js/all.min.js"></script>
-  <script src="./js/bootstrap.bundle.min.js"></script>
+  <!-- <script src="./js/all.min.js"></script> -->
+  <!-- <script src="./js/bootstrap.bundle.min.js"></script> -->
   <script src="./js/main.js"></script>
 </body>
 
